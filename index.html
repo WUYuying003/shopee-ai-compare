@@ -753,9 +753,26 @@
     .cover-meta { grid-template-columns: 1fr 1fr; gap: 20px; }
   }
   @media print {
-    body { scroll-snap-type: none; }
-    .slide { page-break-after: always; min-height: auto; padding: 32px; }
-    .theme-toggle { display: none; }
+    @page { size: 1400px 900px; margin: 0; }
+    html, body { width: 1400px; scroll-snap-type: none; margin: 0; padding: 0; }
+    .deck { max-width: 1400px; margin: 0; }
+    .slide {
+      page-break-after: always;
+      break-after: page;
+      width: 1400px;
+      min-height: 900px;
+      height: 900px;
+      max-height: 900px;
+      padding: 40px 48px;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-bottom: 0;
+    }
+    .slide:last-child { page-break-after: auto; }
+    .theme-toggle, #langToggle { display: none !important; }
+    /* Compress spacing so each slide fits */
+    .slide { gap: 18px; }
+    .callout { padding: 8px 0; }
   }
 </style>
 
