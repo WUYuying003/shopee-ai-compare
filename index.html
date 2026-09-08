@@ -245,23 +245,24 @@
   /* Mockup image slot (drop-in for image-gen or real screenshot) */
   .mockup-slot {
     width: 100%; max-width: 220px; margin: 0 auto;
-    aspect-ratio: 9/19.5;
-    border-radius: 22px;
-    overflow: hidden;
-    background: repeating-linear-gradient(-45deg, var(--ground-sunk) 0 8px, var(--ground) 8px 16px);
-    border: 1px dashed var(--line-strong);
-    box-shadow: var(--shadow-lift);
-    display: flex; align-items: center; justify-content: center;
-    text-align: center; padding: 12px;
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    color: var(--muted);
+    display: block;
     position: relative;
   }
   .mockup-slot img {
-    width: 100%; height: 100%; object-fit: cover;
-    border-radius: 22px;
+    width: 100%; height: auto;
     display: block;
-    background: #111;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px -14px rgba(27,27,26,.28);
+  }
+  .mockup-slot .fallback {
+    aspect-ratio: 9/19.5;
+    background: repeating-linear-gradient(-45deg, var(--ground-sunk) 0 8px, var(--ground) 8px 16px);
+    border: 1px dashed var(--line-strong);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px; text-align: center;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--muted);
   }
   .mockup-slot .fallback b {
     color: var(--ink); display: block; margin-bottom: 4px;
@@ -779,7 +780,7 @@
     <div class="cover-meta">
       <div data-i18n="cover.meta.by">Designer<strong>Leah Wu · 吴瑜英</strong></div>
       <div data-i18n="cover.meta.mail">Contact<strong>qiaolichocolate@gmail.com</strong></div>
-      <div data-i18n="cover.meta.figma">Full research<strong><a href="https://www.figma.com/design/YOUR-FIGMA-URL" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma competitor deep-dive →</a></strong></div>
+      <div data-i18n="cover.meta.figma">Full research<strong><a href="https://www.figma.com/design/QSQXs5x68YgE0Jc6KBA8pP/%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86?node-id=299-1016" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma competitor deep-dive →</a></strong></div>
       <div data-i18n="cover.meta.date">Date<strong>September 2026</strong></div>
     </div>
   </section>
@@ -1012,7 +1013,7 @@ const i18n = {
   'cover.thesis': { en: '<b>The insight.</b> Decision paralysis peaks in the <b>shopping cart</b>, not on the product page. That\'s where buyers have already committed 3–5 candidates and are silently asking, <i>"which one do I actually keep?"</i> Taobao and JD both answer that question with an in-cart AI assistant. They shipped it in Oct 2025 and have iterated multiple times since. Shopee, Lazada, TikTok Shop and Temu have not shipped an equivalent. This proposal ports the pattern to Shopee, adapted for SEA buyers.', cn: '<b>核心洞察。</b>决策瘫痪的峰值在<b>购物车</b>,不在商品详情页。用户已经在购物车里挑了 3-5 件相似商品,正在默默问自己:<i>"到底留哪一件?"</i>淘宝千问和京东京言都在购物车里用 AI 回答了这个问题,2024 年上线,效果验证过。Shopee、Lazada、TikTok Shop、Temu 都没做。本方案把这个模式移植到 Shopee,并针对东南亚买家做本地化改造。' },
 'cover.meta.by': { en: 'Designer<strong>Leah Wu · 吴瑜英</strong>', cn: '设计师<strong>吴瑜英 · Leah Wu</strong>' },
   'cover.meta.mail': { en: 'Contact<strong>qiaolichocolate@gmail.com</strong>', cn: '联系方式<strong>qiaolichocolate@gmail.com</strong>' },
-  'cover.meta.figma': { en: 'Full research<strong><a href="https://www.figma.com/design/YOUR-FIGMA-URL" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma competitor deep-dive →</a></strong>', cn: '详细研究<strong><a href="https://www.figma.com/design/YOUR-FIGMA-URL" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma 竞品深度分析 →</a></strong>' },
+  'cover.meta.figma': { en: 'Full research<strong><a href="https://www.figma.com/design/QSQXs5x68YgE0Jc6KBA8pP/%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86?node-id=299-1016" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma competitor deep-dive →</a></strong>', cn: '详细研究<strong><a href="https://www.figma.com/design/YOUR-FIGMA-URL" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma 竞品深度分析 →</a></strong>' },
   'cover.meta.date': { en: 'Date', cn: '日期' },
   'cover.meta.dateval': { en: 'September 2026', cn: '2026 年 9 月' },
 
