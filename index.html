@@ -140,17 +140,22 @@
   .col-head.them { color: var(--ai); }
   .callout-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
   .callout {
-    display: grid; grid-template-columns: 24px 1fr; gap: 10px;
-    padding: 10px 12px; background: var(--card);
-    border: 1px solid var(--line); border-left: 3px solid var(--brand);
-    border-radius: 6px; font-size: 13px; color: var(--ink-soft); line-height: 1.4;
+    display: grid; grid-template-columns: 32px 1fr; gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 13.5px; color: var(--ink-soft); line-height: 1.5;
+    background: transparent; border-radius: 0;
   }
+  .callout-list > .callout:last-child { border-bottom: 0; }
   .callout .n {
-    font-family: 'JetBrains Mono', monospace; font-size: 11px;
-    color: var(--brand); font-weight: 600; padding-top: 2px;
+    font-family: 'Fraunces', serif;
+    font-weight: 500; font-style: italic;
+    font-size: 22px; color: var(--brand);
+    line-height: 1; letter-spacing: -0.02em;
+    padding-top: 4px;
   }
-  .callout.good { border-left-color: var(--ai); }
   .callout.good .n { color: var(--ai); }
+  .callout b { color: var(--ink); font-weight: 600; }
   .validation {
     display: flex; gap: 20px; margin-top: 20px;
     padding: 14px 16px; background: var(--ai-tint);
@@ -213,7 +218,7 @@
 
   /* ============ Slide 3: Flow (four phones) ============ */
   .flow-strip {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
     margin-top: 8px;
   }
   .flow-step { display: flex; flex-direction: column; gap: 12px; }
@@ -221,24 +226,25 @@
     display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: baseline;
   }
   .flow-step-n {
-    width: 26px; height: 26px; border-radius: 50%;
+    min-width: 26px; height: 26px; padding: 0 6px; border-radius: 999px;
     background: var(--brand); color: white;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+    letter-spacing: .02em; text-transform: uppercase;
   }
   .flow-step h4 {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 14px; font-weight: 600; margin: 0;
+    font-size: 13px; font-weight: 600; margin: 0;
     letter-spacing: -0.005em;
     line-height: 1.25;
   }
   .flow-step p {
-    font-size: 12px; color: var(--muted); margin: 2px 0 0; line-height: 1.4;
+    font-size: 11.5px; color: var(--muted); margin: 2px 0 0; line-height: 1.4;
   }
 
   /* Mockup image slot (drop-in for image-gen or real screenshot) */
   .mockup-slot {
-    width: 100%; margin: 0 auto;
+    width: 100%; max-width: 220px; margin: 0 auto;
     aspect-ratio: 9/19.5;
     border-radius: 22px;
     overflow: hidden;
@@ -787,52 +793,52 @@
       <!-- LEFT: Shopee current state -->
       <div>
         <div class="col-head us" data-i18n="s2.head.us">Shopee cart today (Sep 2026)</div>
-        <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;line-height:1.5">
+        <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;line-height:1.5" data-i18n="s2.p1">
           The current cart is a checklist of what's been added. When a buyer has two similar items from different sellers, the interface offers <b>no way to compare them side by side</b> — no spec differences, no price-per-unit, no delivery difference, no clue which voucher applies where. Buyers open two product pages, tab back and forth, and often give up.
         </p>
         <div class="callout-list">
-          <div class="callout"><span class="n">01</span><span>2 similar cases from different sellers — same price band, no way to know why one is Rp2k more expensive.</span></div>
-          <div class="callout"><span class="n">02</span><span>3 vouchers held — no visibility into which applies to which item, or the optimal combination.</span></div>
-          <div class="callout"><span class="n">03</span><span>Free-shipping banner exists, but no guidance on which item to remove to still qualify.</span></div>
+          <div class="callout"><span class="n">01</span><span data-i18n="s2.left.c1">2 similar cases from different sellers — same price band, no way to know why one is Rp2k more expensive.</span></div>
+          <div class="callout"><span class="n">02</span><span data-i18n="s2.left.c2">3 vouchers held — no visibility into which applies to which item, or the optimal combination.</span></div>
+          <div class="callout"><span class="n">03</span><span data-i18n="s2.left.c3">Free-shipping banner exists, but no guidance on which item to remove to still qualify.</span></div>
         </div>
         <div class="evidence-rail" style="margin-top:16px">
           <div>
             <div class="ev-slot"><img src="screenshots/shopee-cart-loaded.png" alt="Shopee cart loaded" onerror="this.style.display='none';this.parentNode.innerHTML='<span><b>screenshots/shopee-cart-loaded.png</b>Drop your Shopee cart screenshot here</span>'"></div>
-            <div class="ev-caption"><b>Shopee cart today</b> · loaded, 2 similar items, no compare</div>
+            <div class="ev-caption"><b data-i18n="s2.cap1.b">Shopee cart today</b><span data-i18n="s2.cap1.t"> · loaded, 2 similar items, no compare</span></div>
           </div>
           <div>
             <div class="ev-slot"><img src="screenshots/shopee-checkout.png" alt="Shopee checkout" onerror="this.style.display='none';this.parentNode.innerHTML='<span><b>screenshots/shopee-checkout.png</b>Drop your Shopee checkout screenshot here</span>'"></div>
-            <div class="ev-caption"><b>Shopee checkout entry</b> · buyer just proceeds, no chance to reconsider</div>
+            <div class="ev-caption"><b data-i18n="s2.cap2.b">Shopee checkout entry</b><span data-i18n="s2.cap2.t"> · buyer just proceeds, no chance to reconsider</span></div>
           </div>
         </div>
-        <p style="font-size:10px;color:var(--muted);margin-top:8px;font-family:'JetBrains Mono',monospace">Live captures from Shopee ID mobile app · Sep 2026.</p>
+        <p style="font-size:10px;color:var(--muted);margin-top:8px;font-family:'JetBrains Mono',monospace"><span data-i18n="s2.livenote">Live captures from Shopee ID mobile app · Sep 2026.</span></p>
       </div>
 
       <!-- RIGHT: Taobao/JD have solved this -->
       <div>
         <div class="col-head them" data-i18n="s2.head.them">The pattern already works — in China</div>
-        <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;line-height:1.5">
+        <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;line-height:1.5" data-i18n="s2.p2">
           Taobao (千问) and JD (京言) both ship an <b>in-cart AI assistant</b> that lets a buyer select 2+ items, ask <i>"compare these for me,"</i> and get a written verdict plus a spec table — <b>without leaving the cart</b>. Launched Oct 2025 and iterated multiple times since. Measurable lifts in checkout initiation and lower cart dwell across every release.
         </p>
         <div class="callout-list">
-          <div class="callout good"><span class="n">01</span><span><b>Trigger lives in the cart.</b> Where the choice is actually being made. Not the PDP.</span></div>
-          <div class="callout good"><span class="n">02</span><span><b>Answer first, table second.</b> A one-line verdict up top ("A is cheaper by 5%, B has better reviews"), spec table below for buyers who want detail.</span></div>
-          <div class="callout good"><span class="n">03</span><span><b>Handoff to purchase.</b> "Keep this one · remove the other" is one tap — the winner stays in cart, the loser is removed, buyer proceeds to checkout.</span></div>
+          <div class="callout good"><span class="n">01</span><span data-i18n="s2.right.c1"><b>Trigger lives in the cart.</b> Where the choice is actually being made. Not the PDP.</span></div>
+          <div class="callout good"><span class="n">02</span><span data-i18n="s2.right.c2"><b>Answer first, table second.</b> A one-line verdict up top ("A is cheaper by 5%, B has better reviews"), spec table below for buyers who want detail.</span></div>
+          <div class="callout good"><span class="n">03</span><span data-i18n="s2.right.c3"><b>Handoff to purchase.</b> "Keep this one · remove the other" is one tap — the winner stays in cart, the loser is removed, buyer proceeds to checkout.</span></div>
         </div>
         <div class="evidence-rail" style="margin-top:16px">
           <div>
             <div class="ev-slot"><img src="screenshots/taobao-ai.png" alt="Taobao 千问" onerror="this.style.display='none';this.parentNode.innerHTML='<span><b>screenshots/taobao-ai.png</b>Drop Taobao 千问 screenshot here</span>'"></div>
-            <div class="ev-caption"><b>Taobao · 千问</b> · in-cart AI compare, launched Oct 2025</div>
+            <div class="ev-caption"><b data-i18n="s2.cap3.b">Taobao · 千问</b><span data-i18n="s2.cap3.t"> · in-cart AI compare, launched Oct 2025</span></div>
           </div>
           <div>
             <div class="ev-slot"><img src="screenshots/jd-ai.png" alt="JD 京言" onerror="this.style.display='none';this.parentNode.innerHTML='<span><b>screenshots/jd-ai.png</b>Drop JD 京言 screenshot here</span>'"></div>
-            <div class="ev-caption"><b>JD · 京言</b> · same pattern, adds price-history chart</div>
+            <div class="ev-caption"><b data-i18n="s2.cap4.b">JD · 京言</b><span data-i18n="s2.cap4.t"> · same pattern, adds price-history chart</span></div>
           </div>
         </div>
 
         <div class="validation" style="margin-top:16px">
-          <div><b>800M+</b>Taobao MAU using this pattern</div>
-          <div><b>0</b>SEA marketplaces shipping it today</div>
+          <div><b>800M+</b><span data-i18n="s2.val1">Taobao MAU using this pattern</span></div>
+          <div><b>0</b><span data-i18n="s2.val2">SEA marketplaces shipping it today</span></div>
         </div>
       </div>
     </div>
@@ -845,253 +851,59 @@
     <h2 class="title" data-i18n="s3.title">Four taps from indecision to order — inside the Shopee UI buyers already know.</h2>
 
     <div class="flow-strip">
-      <!-- STEP 1: Cart with new AI banner -->
       <div class="flow-step">
         <div class="flow-step-head">
-          <span class="flow-step-n">1</span>
+          <span class="flow-step-n">01A</span>
           <div>
-            <h4 data-i18n="s3.step1.h">Cart, with a new AI Compare row.</h4>
-            <p data-i18n="s3.step1.p">Appears only when 2+ items in the same category are in the cart. Otherwise hidden.</p>
+            <h4 data-i18n="s3.step1a.h">Entry via top banner</h4>
+            <p data-i18n="s3.step1a.p">A contextual card appears above cart items when 2+ similar items are detected.</p>
           </div>
         </div>
-        <div class="phone" style="margin:0 auto">
-          <div class="phone-screen">
-            <div class="sp-status"><span>9:41</span><span class="r">5G ▮</span></div>
-            <div class="sp-header">
-              <span class="back">‹</span>
-              <span class="title">Shopping Cart (3)</span>
-              <span class="edit">Edit</span>
-            </div>
-            <div class="sp-cart">
-              <div class="sp-freeshipbar">🚚 <b>Free Shipping</b> unlocked ·  Rp181k / 100k</div>
-
-              <!-- NEW: AI compare entry -->
-              <div class="sp-ai-entry">
-                <span class="new">NEW</span>
-                <div class="icon">✦</div>
-                <div class="txt"><b>Comparing 2 cases?</b><span>Let AI decide in 3 seconds</span></div>
-                <span class="cta">Compare ›</span>
-              </div>
-
-              <div class="sp-shop-card">
-                <div class="sp-shop-head">
-                  <div class="cb on"></div>
-                  <div class="badge">Mall</div>
-                  <div class="shopname">Unilever Beauty Shop</div>
-                  <div class="live">▶ LIVE</div>
-                </div>
-                <div class="sp-item">
-                  <div class="cb on"></div>
-                  <div class="thumb">🧴</div>
-                  <div class="info">
-                    <h5>Vaseline Flawless Bright 330ml + Deo</h5>
-                    <span class="variant">Multipack ▼</span>
-                    <div class="price"><span class="now">Rp153,200</span><span class="after">After Voucher</span></div>
-                    <div class="qty"><b>−</b><span>1</span><b>+</b></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="sp-shop-card">
-                <div class="sp-shop-head">
-                  <div class="cb on"></div>
-                  <div class="badge">Mall</div>
-                  <div class="shopname">Oemah Herborist Offici…</div>
-                  <div class="live">▶ LIVE</div>
-                </div>
-                <div class="sp-item">
-                  <div class="cb on"></div>
-                  <div class="thumb">🌿</div>
-                  <div class="info">
-                    <h5>Herborist Body Lotion 200ml</h5>
-                    <span class="variant">Natural Olive ▼</span>
-                    <div class="price"><span class="now">Rp28,400</span></div>
-                    <div class="qty"><b>−</b><span>1</span><b>+</b></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="sp-footer">
-                <div class="cb on"></div>
-                <span>All</span>
-                <div class="total">Total <b>Rp181,600</b></div>
-                <div class="co">Check Out (2)</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="mockup-slot"><img src="mockups/step1-banner.png" alt="Entry via top banner"></div>
       </div>
 
-      <!-- STEP 2: Select items sheet -->
       <div class="flow-step">
         <div class="flow-step-head">
-          <span class="flow-step-n">2</span>
+          <span class="flow-step-n">01B</span>
+          <div>
+            <h4 data-i18n="s3.step1b.h">Entry via header shortcut</h4>
+            <p data-i18n="s3.step1b.p">A subtle "Compare" text appears next to the Edit link. Non-intrusive for buyers who don't need it.</p>
+          </div>
+        </div>
+        <div class="mockup-slot"><img src="mockups/step1-header.png" alt="Entry via header shortcut"></div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-head">
+          <span class="flow-step-n">02</span>
           <div>
             <h4 data-i18n="s3.step2.h">Pick the items to compare.</h4>
             <p data-i18n="s3.step2.p">A bottom sheet lists everything in cart. Pre-selects the pair the AI already spotted.</p>
           </div>
         </div>
-        <div class="phone" style="margin:0 auto">
-          <div class="phone-screen">
-            <div class="sp-status"><span>9:41</span><span class="r">5G ▮</span></div>
-            <div class="sp-header">
-              <span class="back">‹</span>
-              <span class="title">Shopping Cart (3)</span>
-              <span class="edit">Edit</span>
-            </div>
-            <div class="sp-cart" style="filter:brightness(.7)">
-              <div class="sp-freeshipbar">🚚 Free Shipping unlocked</div>
-              <div class="sp-shop-card"><div class="sp-shop-head"><div class="cb on"></div><div class="badge">Mall</div><div class="shopname">Unilever Beauty…</div></div>
-            </div>
-            <div class="sp-sheet-scrim">
-              <div class="sp-sheet">
-                <div class="handle"></div>
-                <div class="head"><b>Choose items to compare</b><span class="x">✕</span></div>
-                <div class="tabs">
-                  <span>Browse</span>
-                  <span class="on">In Cart</span>
-                  <span>Wishlist</span>
-                </div>
-                <div class="chips">
-                  <span class="chip on">All</span>
-                  <span class="chip">Beauty</span>
-                  <span class="chip">Fashion</span>
-                </div>
-                <div class="sp-sheet-item">
-                  <div class="cb on"></div>
-                  <div class="th">🧴</div>
-                  <div class="info"><h6>Vaseline Flawless Bright 330ml</h6><div class="p">Rp153,200</div>
-                </div>
-                <div class="sp-sheet-item">
-                  <div class="cb on"></div>
-                  <div class="th">🌿</div>
-                  <div class="info"><h6>Herborist Body Lotion 200ml</h6><div class="p">Rp28,400</div>
-                </div>
-                <div class="sp-sheet-item">
-                  <div class="cb"></div>
-                  <div class="th">👜</div>
-                  <div class="info"><h6>Korean Style 6pcs Earring Set</h6><div class="p">Rp8,800</div>
-                </div>
-                <div class="sp-sheet-confirm">Confirm Selection (2)</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="mockup-slot"><img src="mockups/step2-select.png" alt="Select items to compare"></div>
       </div>
 
-      <!-- STEP 3: AI answer + short table -->
       <div class="flow-step">
         <div class="flow-step-head">
-          <span class="flow-step-n">3</span>
+          <span class="flow-step-n">03</span>
           <div>
             <h4 data-i18n="s3.step3.h">Verdict first, table second.</h4>
             <p data-i18n="s3.step3.p">A one-line answer up top; scrollable spec table below; the seller-review sources are one tap away.</p>
           </div>
         </div>
-        <div class="phone" style="margin:0 auto">
-          <div class="phone-screen">
-            <div class="sp-status"><span>9:41</span><span class="r">5G ▮</span></div>
-            <div class="sp-chat-header">
-              <span class="back">‹</span>
-              <b>Shopee Copilot</b>
-              <span class="ico">⋯</span>
-            </div>
-            <div class="sp-chat-body">
-              <div class="sp-chat-msg-user">
-                Compare these
-                <div class="items"><div class="m">🧴</div><div class="m">🌿</div>
-              </div>
-              <div class="sp-chat-avatar"><div class="a">✦</div>Shopee Copilot</div>
-              <div class="sp-chat-msg-ai">
-                <b>Herborist is 5× cheaper and rated higher</b> (4.9 vs 4.7). Vaseline gives you 130ml more product and a free deodorant. If value-per-ml matters, keep <b>Vaseline</b>. If pure skin-quality matters and you're on budget, keep <b>Herborist</b>.
-              </div>
-              <div class="sp-chat-table">
-                <div class="thead"><span>Metric</span><span>Vaseline</span><span>Herborist</span></div>
-                <div class="row"><span class="l">Price</span><b>Rp153,200</b><b>Rp28,400</b></div>
-                <div class="row hi"><span class="l">Per 100ml</span><b>Rp46,400</b><b>Rp14,200</b></div>
-                <div class="row"><span class="l">Rating</span><b>4.7 ★</b><b>4.9 ★</b></div>
-                <div class="row"><span class="l">Ships in</span><b>1–3 days</b><b>1–3 days</b></div>
-                <div class="fullbtn">View full comparison ›</div>
-              </div>
-              <div class="sp-chat-actions">
-                <div class="btn ghost">Keep both</div>
-                <div class="btn solid">Keep Herborist</div>
-              </div>
-            </div>
-            <div class="sp-chat-input">
-              <div class="box">Ask a follow-up…</div>
-              <span style="color:#EE4D2D">🎤</span>
-            </div>
-          </div>
-        </div>
+        <div class="mockup-slot"><img src="mockups/step3-verdict.png" alt="AI verdict"></div>
       </div>
 
-      <!-- STEP 4: Full compare table -->
       <div class="flow-step">
         <div class="flow-step-head">
-          <span class="flow-step-n">4</span>
+          <span class="flow-step-n">04</span>
           <div>
             <h4 data-i18n="s3.step4.h">Full table, one-tap decide.</h4>
             <p data-i18n="s3.step4.p">Every "BEST" tag is derived from real product data. Keep + Buy Now proceeds directly to checkout.</p>
           </div>
         </div>
-        <div class="phone" style="margin:0 auto">
-          <div class="phone-screen">
-            <div class="sp-status"><span>9:41</span><span class="r">5G ▮</span></div>
-            <div class="sp-full-header">
-              <span class="back">‹</span>
-              <span style="flex:1">Compare (2)</span>
-              <span style="color:#666;font-weight:400">Share</span>
-            </div>
-            <div class="sp-full-tabs">
-              <span>Summary</span>
-              <span class="on">Full Table</span>
-              <span>Reviews</span>
-            </div>
-            <div class="sp-full-table">
-              <div class="sp-full-thead">
-                <div></div>
-                <div class="p"><div class="th">🧴</div><span>Vaseline</span></div>
-                <div class="p"><div class="th">🌿</div><span>Herborist</span></div>
-              </div>
-              <div class="sp-full-row">
-                <div class="lbl">Price<br>after voucher</div>
-                <div><b>Rp153,200</b></div>
-                <div class="best"><b>Rp28,400</b></div>
-              </div>
-              <div class="sp-full-row">
-                <div class="lbl">Rp per 100ml</div>
-                <div><b>Rp46,400</b></div>
-                <div class="best"><b>Rp14,200</b></div>
-              </div>
-              <div class="sp-full-row">
-                <div class="lbl">Volume</div>
-                <div class="best"><b>330ml + Deo</b></div>
-                <div><b>200ml</b></div>
-              </div>
-              <div class="sp-full-row">
-                <div class="lbl">Rating</div>
-                <div><b>4.7 · 10RB+ sold</b></div>
-                <div class="best"><b>4.9 · 8RB+ sold</b></div>
-              </div>
-              <div class="sp-full-row">
-                <div class="lbl">Voucher</div>
-                <div><b>Rp20k Off</b></div>
-                <div><b>Rp2k Off</b></div>
-              </div>
-              <div class="sp-full-row">
-                <div class="lbl">Shop rating</div>
-                <div><b>Mall · 4.8</b></div>
-                <div><b>Mall · 4.9</b></div>
-              </div>
-              <div class="sp-full-source">Sources: 2 product pages · 18,412 reviews · Sep 2026</div>
-            </div>
-            <div class="sp-full-actions">
-              <div class="keep">Keep both</div>
-              <div class="buy">Keep Herborist · Check Out</div>
-            </div>
-          </div>
-        </div>
+        <div class="mockup-slot"><img src="mockups/step4-table.png" alt="Full compare table"></div>
       </div>
     </div>
   </section>
@@ -1213,8 +1025,29 @@ const i18n = {
 
   's3.eyebrow': { en: 'Solution · 4-step in-cart flow', cn: '解决方案 · 购物车 4 步流程' },
   's3.title': { en: 'Four taps from indecision to order — inside the Shopee UI buyers already know.', cn: '4 次点击,从"选不定"到"下单成功" —— 全程在买家熟悉的 Shopee 界面里。' },
-  's3.step1.h': { en: 'Cart, with a new AI Compare row.', cn: '购物车里新增一条 AI 对比入口。' },
-  's3.step1.p': { en: 'Appears only when 2+ items in the same category are in the cart. Otherwise hidden.', cn: '仅在购物车里出现 2+ 同类目商品时展示,否则隐藏。' },
+'s2.p1': { en: 'The current cart is a checklist of what\'s been added. When a buyer has two similar items from different sellers, the interface offers <b>no way to compare them side by side</b> — no spec differences, no price-per-unit, no delivery difference, no clue which voucher applies where. Buyers open two product pages, tab back and forth, and often give up.', cn: '现在的购物车只是一张"加了什么"的清单。当买家从不同卖家加了两件相似商品时,界面<b>没有任何并列对比的方式</b> —— 规格差异、单位价格、配送差异、优惠券适用范围,全都不清晰。买家只能反复打开两个商品页来回切换,常常直接放弃。' },
+  's2.p2': { en: 'Taobao (千问) and JD (京言) both ship an <b>in-cart AI assistant</b> that lets a buyer select 2+ items, ask <i>"compare these for me,"</i> and get a written verdict plus a spec table — <b>without leaving the cart</b>. Launched Oct 2025 and iterated multiple times since. Measurable lifts in checkout initiation and lower cart dwell across every release.', cn: '淘宝(千问)和京东(京言)都上线了<b>购物车内 AI 助手</b>:买家勾选 2+ 商品,一句"帮我对比",立刻得到文字结论 + 规格对比表 —— <b>无需离开购物车</b>。2025 年 10 月上线,至今已迭代多个版本,每次都能看到结算发起率的提升和购物车停留时长的下降。' },
+  's2.left.c1': { en: '2 similar cases from different sellers — same price band, no way to know why one is Rp2k more expensive.', cn: '两件相似手机壳来自不同卖家 —— 同价格带,却完全看不出为什么一件贵 Rp2k。' },
+  's2.left.c2': { en: '3 vouchers held — no visibility into which applies to which item, or the optimal combination.', cn: '手里有 3 张券 —— 完全不知道哪张适用哪件商品,也不知道最优组合。' },
+  's2.left.c3': { en: 'Free-shipping banner exists, but no guidance on which item to remove to still qualify.', cn: '免运费横条虽在,但没有告诉买家删哪件还能保持凑单。' },
+  's2.right.c1': { en: '<b>Trigger lives in the cart.</b> Where the choice is actually being made. Not the PDP.', cn: '<b>入口在购物车里。</b>这才是决策真正发生的地方,不是商品详情页。' },
+  's2.right.c2': { en: '<b>Answer first, table second.</b> A one-line verdict up top ("A is cheaper by 5%, B has better reviews"), spec table below for buyers who want detail.', cn: '<b>结论先行,表格随后。</b>顶部一句话结论(如"A 便宜 5%,B 评价更好"),下方是完整规格表给想深看的买家。' },
+  's2.right.c3': { en: '<b>Handoff to purchase.</b> "Keep this one · remove the other" is one tap — the winner stays in cart, the loser is removed, buyer proceeds to checkout.', cn: '<b>一键完成购买。</b>"留这件·删另一件"只需一次点击 —— 赢家留在购物车,输家被移除,买家直接进入结算。' },
+  's2.cap1.b': { en: 'Shopee cart today', cn: 'Shopee 购物车现状' },
+  's2.cap1.t': { en: ' · loaded, 2 similar items, no compare', cn: ' · 已装 2 件相似商品,无对比功能' },
+  's2.cap2.b': { en: 'Shopee checkout entry', cn: 'Shopee 结算入口' },
+  's2.cap2.t': { en: ' · buyer just proceeds, no chance to reconsider', cn: ' · 买家直接下单,无回头思考机会' },
+  's2.cap3.b': { en: 'Taobao · 千问', cn: '淘宝 · 千问' },
+  's2.cap3.t': { en: ' · in-cart AI compare, launched Oct 2025', cn: ' · 购物车内 AI 对比,2025 年 10 月上线' },
+  's2.cap4.b': { en: 'JD · 京言', cn: '京东 · 京言' },
+  's2.cap4.t': { en: ' · same pattern, adds price-history chart', cn: ' · 同模式,并加了价格历史图' },
+  's2.livenote': { en: 'Live captures from Shopee ID mobile app · Sep 2026.', cn: '实拍自 Shopee ID 移动 App · 2026 年 9 月。' },
+  's2.val1': { en: 'Taobao MAU using this pattern', cn: '淘宝月活用户使用中' },
+  's2.val2': { en: 'SEA marketplaces shipping it today', cn: '家东南亚电商已上线' },
+  's3.step1a.h': { en: 'Entry via top banner', cn: '入口 A:顶部横幅' },
+  's3.step1a.p': { en: 'A contextual card appears above cart items when 2+ similar items are detected.', cn: '检测到 2+ 相似商品时,购物车顶部出现一张上下文卡片。' },
+  's3.step1b.h': { en: 'Entry via header shortcut', cn: '入口 B:头部快捷' },
+  's3.step1b.p': { en: 'A subtle "Compare" text appears next to the Edit link. Non-intrusive for buyers who don\'t need it.', cn: '在 Edit 旁悄悄出现"Compare"字样。不需要的买家完全不受打扰。' },
   's3.step2.h': { en: 'Pick the items to compare.', cn: '勾选要对比的商品。' },
   's3.step2.p': { en: 'A bottom sheet lists everything in cart. Pre-selects the pair the AI already spotted.', cn: '底部弹窗列出购物车所有商品,AI 智能预选那一对。' },
   's3.step3.h': { en: 'Verdict first, table second.', cn: '结论先行,表格随后。' },
