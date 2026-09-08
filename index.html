@@ -122,7 +122,7 @@
   }
   .cover-thesis b { color: var(--ink); font-weight: 600; }
   .cover-meta {
-    display: grid; grid-template-columns: repeat(3, max-content); gap: 48px;
+    display: grid; grid-template-columns: repeat(4, max-content); gap: 40px;
     padding-top: 24px; border-top: 1px solid var(--line);
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em;
@@ -777,8 +777,9 @@
     </div>
 
     <div class="cover-meta">
-      <div data-i18n="cover.meta.for">Prepared for<strong>Buyer &amp; Marketing Team</strong></div>
-      <div data-i18n="cover.meta.role">Role<strong>Product Designer</strong></div>
+      <div data-i18n="cover.meta.by">Designer<strong>Leah Wu · 吴瑜英</strong></div>
+      <div data-i18n="cover.meta.mail">Contact<strong>qiaolichocolate@gmail.com</strong></div>
+      <div data-i18n="cover.meta.figma">Full research<strong><a href="https://www.figma.com/design/YOUR-FIGMA-URL" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma competitor deep-dive →</a></strong></div>
       <div data-i18n="cover.meta.date">Date<strong>September 2026</strong></div>
     </div>
   </section>
@@ -794,12 +795,12 @@
       <div>
         <div class="col-head us" data-i18n="s2.head.us">Shopee cart today (Sep 2026)</div>
         <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;line-height:1.5" data-i18n="s2.p1">
-          The current cart is a checklist of what's been added. When a buyer has two similar items from different sellers, the interface offers <b>no way to compare them side by side</b> — no spec differences, no price-per-unit, no delivery difference, no clue which voucher applies where. Buyers open two product pages, tab back and forth, and often give up.
+          The cart lists items — but can't compare them. When two similar items sit side by side, buyers get no spec, price-per-unit, delivery or voucher comparison. They flip between product pages, then give up.
         </p>
         <div class="callout-list">
-          <div class="callout"><span class="n">01</span><span data-i18n="s2.left.c1">2 similar cases from different sellers — same price band, no way to know why one is Rp2k more expensive.</span></div>
-          <div class="callout"><span class="n">02</span><span data-i18n="s2.left.c2">3 vouchers held — no visibility into which applies to which item, or the optimal combination.</span></div>
-          <div class="callout"><span class="n">03</span><span data-i18n="s2.left.c3">Free-shipping banner exists, but no guidance on which item to remove to still qualify.</span></div>
+          <div class="callout"><span class="n">01</span><span data-i18n="s2.left.c1">2 similar cases, different sellers. Why is one Rp2k more?</span></div>
+          <div class="callout"><span class="n">02</span><span data-i18n="s2.left.c2">3 vouchers held — no visibility on the optimal combination.</span></div>
+          <div class="callout"><span class="n">03</span><span data-i18n="s2.left.c3">Free-ship banner shows the shortfall — but no way to close it.</span></div>
         </div>
         <div class="evidence-rail" style="margin-top:16px">
           <div>
@@ -818,12 +819,12 @@
       <div>
         <div class="col-head them" data-i18n="s2.head.them">The pattern already works — in China</div>
         <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;line-height:1.5" data-i18n="s2.p2">
-          Taobao (千问) and JD (京言) both ship an <b>in-cart AI assistant</b> that lets a buyer select 2+ items, ask <i>"compare these for me,"</i> and get a written verdict plus a spec table — <b>without leaving the cart</b>. Launched Oct 2025 and iterated multiple times since. Measurable lifts in checkout initiation and lower cart dwell across every release.
+          Taobao (千问) and JD (京言) ship an <b>in-cart AI assistant</b>. Pick 2+ items, ask <i>"compare,"</i> get a verdict + spec table — <b>without leaving the cart</b>. Launched Oct 2025, iterated multiple times since. Every release lifts checkout initiation, cuts cart dwell.
         </p>
         <div class="callout-list">
           <div class="callout good"><span class="n">01</span><span data-i18n="s2.right.c1"><b>Trigger lives in the cart.</b> Where the choice is actually being made. Not the PDP.</span></div>
-          <div class="callout good"><span class="n">02</span><span data-i18n="s2.right.c2"><b>Answer first, table second.</b> A one-line verdict up top ("A is cheaper by 5%, B has better reviews"), spec table below for buyers who want detail.</span></div>
-          <div class="callout good"><span class="n">03</span><span data-i18n="s2.right.c3"><b>Handoff to purchase.</b> "Keep this one · remove the other" is one tap — the winner stays in cart, the loser is removed, buyer proceeds to checkout.</span></div>
+          <div class="callout good"><span class="n">02</span><span data-i18n="s2.right.c2"><b>Answer first, table second.</b> One-line verdict up top. Spec table below for the curious.</span></div>
+          <div class="callout good"><span class="n">03</span><span data-i18n="s2.right.c3"><b>Handoff to purchase.</b> One tap: winner stays, loser leaves, checkout begins.</span></div>
         </div>
         <div class="evidence-rail" style="margin-top:16px">
           <div>
@@ -921,36 +922,36 @@
           <div class="local-item">
             <div class="local-tag">PRICE</div>
             <div>
-              <h4 data-i18n="s4.local.1.h">Value-per-unit leads, not spec sheets.</h4>
-              <p>SEA buyers optimise for price-per-100ml, not feature counts. The AI's first line is always a value verdict; specs are secondary.</p>
+              <h4 data-i18n="s4.local.1.h">Value-per-unit leads.</h4>
+              <p>AI leads with a value verdict, not a spec sheet.</p>
             </div>
           </div>
           <div class="local-item">
             <div class="local-tag">VOUCH</div>
             <div>
-              <h4 data-i18n="s4.local.2.h">Vouchers are part of the price.</h4>
-              <p>Every price shown is the after-voucher price, with the applicable voucher named inline. Shopee's stacking logic gets translated, not hidden.</p>
+              <h4 data-i18n="s4.local.2.h">Voucher-inclusive prices.</h4>
+              <p>Every price is after-voucher, with the specific voucher named.</p>
             </div>
           </div>
           <div class="local-item">
             <div class="local-tag">LANG</div>
             <div>
-              <h4 data-i18n="s4.local.3.h">Multilingual, review-grounded.</h4>
-              <p>AI answers in EN / ID / TH / VN / MS. Chinese-language seller descriptions are auto-translated. Every claim cites the review or Q&amp;A it came from.</p>
+              <h4 data-i18n="s4.local.3.h">Multilingual, grounded.</h4>
+              <p>EN / ID / TH / VN / MS. Every claim cites its source review.</p>
             </div>
           </div>
           <div class="local-item">
             <div class="local-tag">3G</div>
             <div>
-              <h4 data-i18n="s4.local.4.h">Verdict streams first, table lazy-loads.</h4>
-              <p>The one-line answer arrives in &lt;600ms; the full spec table loads afterwards. Optimised for 3G / low-end Android common in ID / PH / VN.</p>
+              <h4 data-i18n="s4.local.4.h">Verdict streams first.</h4>
+              <p>One-line answer in &lt;600ms. Table loads after. Built for 3G.</p>
             </div>
           </div>
           <div class="local-item">
             <div class="local-tag">TRUST</div>
             <div>
-              <h4 data-i18n="s4.local.5.h">Every AI answer is reversible.</h4>
-              <p>"Keep the other" undoes any AI-suggested removal in one tap for 24 hours. Trust is earned in retention, not in the first click.</p>
+              <h4 data-i18n="s4.local.5.h">Every action is reversible.</h4>
+              <p>One-tap undo, 24-hour window. Trust before speed.</p>
             </div>
           </div>
         </div>
@@ -962,34 +963,34 @@
           <div class="kpi-card">
             <div class="label" data-i18n="s4.kpi.1.l">Cart → Checkout</div>
             <div class="val">+8<span class="unit">%</span></div>
-            <div class="sub">Decision paralysis in cart is the top drop-off; a verdict resolves it.</div>
+            <div class="sub">Decision paralysis resolved.</div>
           </div>
           <div class="kpi-card">
             <div class="label" data-i18n="s4.kpi.2.l">Cart abandonment</div>
             <div class="val">−6<span class="unit">%</span></div>
-            <div class="sub">Fewer buyers open cart, bounce, and never return.</div>
+            <div class="sub">Fewer bounces from the cart.</div>
           </div>
           <div class="kpi-card">
             <div class="label" data-i18n="s4.kpi.3.l">Time in cart</div>
             <div class="val">−35<span class="unit">%</span></div>
-            <div class="sub">From tab-to-PDP flipping to one-screen resolution.</div>
+            <div class="sub">One-screen resolution.</div>
           </div>
           <div class="kpi-card hero">
             <div class="label" data-i18n="s4.kpi.4.l">Order CVR</div>
             <div class="val">+10<span class="unit">%</span></div>
-            <div class="sub">Directional; mid-range estimate benchmarked to Taobao's 2025–26 rollout data.</div>
+            <div class="sub">Compounded lift. Benchmarked to Taobao 2025–26.</div>
           </div>
         </div>
 
         <div class="rollout">
           <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">4-week rollout</div>
-          <div class="rollout-row"><span class="rollout-when">Wk 1</span><span><b>A/B test in Beauty &amp; 3C</b> — categories where within-cart comparison volume is highest.</span></div>
-          <div class="rollout-row"><span class="rollout-when">Wk 2–3</span><span><b>Expand ID / MY / SG</b> — the three markets where LLM inference cost is lowest per query.</span></div>
-          <div class="rollout-row"><span class="rollout-when">Wk 4+</span><span><b>Full-region rollout</b> conditional on refund-rate holding within ±0.5% of baseline.</span></div>
+          <div class="rollout-row"><span class="rollout-when">Wk 1</span><span><b>A/B test in Beauty &amp; 3C.</b></span></div>
+          <div class="rollout-row"><span class="rollout-when">Wk 2–3</span><span><b>Expand to ID / MY / SG.</b></span></div>
+          <div class="rollout-row"><span class="rollout-when">Wk 4+</span><span><b>Full rollout</b> if refund-rate stable.</span></div>
         </div>
 
         <div class="safeguard">
-          <b>Safeguards.</b> Every AI answer cites the reviews it drew from. The Copilot never removes an item — only suggests. Refund rate is monitored weekly as a guardrail; if it moves &gt;1%, rollout pauses. Confidence &lt; 0.7 → route to seller chat instead of guessing.
+          <b>Safeguards.</b> Cite sources. Suggest, never remove. Weekly refund-rate guardrail. Low confidence → hand to seller.
         </div>
       </div>
     </div>
@@ -1009,10 +1010,9 @@ const i18n = {
   'cover.title2': { en: 'in the Cart.', cn: '就在购物车里。' },
   'cover.sub': { en: 'Bringing a proven Chinese-market pattern<br>to Southeast Asia — where nobody has it yet.', cn: '把中国市场已验证的模式<br>带到东南亚 —— 目前竞对都没做。' },
   'cover.thesis': { en: '<b>The insight.</b> Decision paralysis peaks in the <b>shopping cart</b>, not on the product page. That\'s where buyers have already committed 3–5 candidates and are silently asking, <i>"which one do I actually keep?"</i> Taobao and JD both answer that question with an in-cart AI assistant. They shipped it in Oct 2025 and have iterated multiple times since. Shopee, Lazada, TikTok Shop and Temu have not shipped an equivalent. This proposal ports the pattern to Shopee, adapted for SEA buyers.', cn: '<b>核心洞察。</b>决策瘫痪的峰值在<b>购物车</b>,不在商品详情页。用户已经在购物车里挑了 3-5 件相似商品,正在默默问自己:<i>"到底留哪一件?"</i>淘宝千问和京东京言都在购物车里用 AI 回答了这个问题,2024 年上线,效果验证过。Shopee、Lazada、TikTok Shop、Temu 都没做。本方案把这个模式移植到 Shopee,并针对东南亚买家做本地化改造。' },
-  'cover.meta.for': { en: 'Prepared for', cn: '呈交给' },
-  'cover.meta.forval': { en: 'Buyer & Marketing Team', cn: '买家与营销团队' },
-  'cover.meta.role': { en: 'Role', cn: '岗位' },
-  'cover.meta.roleval': { en: 'Product Designer', cn: '产品设计师' },
+'cover.meta.by': { en: 'Designer<strong>Leah Wu · 吴瑜英</strong>', cn: '设计师<strong>吴瑜英 · Leah Wu</strong>' },
+  'cover.meta.mail': { en: 'Contact<strong>qiaolichocolate@gmail.com</strong>', cn: '联系方式<strong>qiaolichocolate@gmail.com</strong>' },
+  'cover.meta.figma': { en: 'Full research<strong><a href="https://www.figma.com/design/YOUR-FIGMA-URL" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma competitor deep-dive →</a></strong>', cn: '详细研究<strong><a href="https://www.figma.com/design/YOUR-FIGMA-URL" target="_blank" style="color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand)">Figma 竞品深度分析 →</a></strong>' },
   'cover.meta.date': { en: 'Date', cn: '日期' },
   'cover.meta.dateval': { en: 'September 2026', cn: '2026 年 9 月' },
 
@@ -1021,18 +1021,18 @@ const i18n = {
   's2.head.us': { en: 'Shopee cart today (Sep 2026)', cn: 'Shopee 购物车现状 (2026 年 9 月)' },
   's2.head.them': { en: 'The pattern already works — in China', cn: '这个模式在中国已经跑通了' },
   's2.p1': { en: 'The current cart is a checklist of what\'s been added. When a buyer has two similar items from different sellers, the interface offers <b>no way to compare them side by side</b> — no spec differences, no price-per-unit, no delivery difference, no clue which voucher applies where. Buyers open two product pages, tab back and forth, and often give up.', cn: '现在的购物车只是一张"加了什么"的清单。当买家从不同卖家加了两件相似商品时,界面<b>没有提供任何并列对比的方式</b> —— 规格差异、单位价格、配送差异、优惠券适用范围,全都不清晰。买家只能反复打开两个商品页来回切换,常常直接放弃。' },
-  's2.p2': { en: 'Taobao (千问) and JD (京言) both ship an <b>in-cart AI assistant</b> that lets a buyer select 2+ items, ask <i>"compare these for me,"</i> and get a written verdict plus a spec table — <b>without leaving the cart</b>. Launched Oct 2025 and iterated multiple times since. Measurable lifts in checkout initiation and lower cart dwell across every release.', cn: '淘宝(千问)和京东(京言)都上线了<b>购物车内 AI 助手</b>:买家勾选 2+ 商品,一句"帮我对比",立刻得到文字结论 + 规格对比表 —— <b>无需离开购物车</b>。2025 年 10 月上线。至今已迭代多个版本,显著提升了结算发起率、降低了购物车停留时长。' },
+  's2.p2': { en: 'Taobao (千问) and JD (京言) ship an <b>in-cart AI assistant</b>. Pick 2+ items, ask <i>"compare,"</i> get a verdict + spec table — <b>without leaving the cart</b>. Launched Oct 2025, iterated multiple times since. Every release lifts checkout initiation, cuts cart dwell.', cn: '淘宝(千问)和京东(京言)都上线了<b>购物车内 AI 助手</b>:买家勾选 2+ 商品,一句"帮我对比",立刻得到文字结论 + 规格对比表 —— <b>无需离开购物车</b>。2025 年 10 月上线。至今已迭代多个版本,显著提升了结算发起率、降低了购物车停留时长。' },
 
   's3.eyebrow': { en: 'Solution · 4-step in-cart flow', cn: '解决方案 · 购物车 4 步流程' },
   's3.title': { en: 'Four taps from indecision to order — inside the Shopee UI buyers already know.', cn: '4 次点击,从"选不定"到"下单成功" —— 全程在买家熟悉的 Shopee 界面里。' },
 's2.p1': { en: 'The current cart is a checklist of what\'s been added. When a buyer has two similar items from different sellers, the interface offers <b>no way to compare them side by side</b> — no spec differences, no price-per-unit, no delivery difference, no clue which voucher applies where. Buyers open two product pages, tab back and forth, and often give up.', cn: '现在的购物车只是一张"加了什么"的清单。当买家从不同卖家加了两件相似商品时,界面<b>没有任何并列对比的方式</b> —— 规格差异、单位价格、配送差异、优惠券适用范围,全都不清晰。买家只能反复打开两个商品页来回切换,常常直接放弃。' },
-  's2.p2': { en: 'Taobao (千问) and JD (京言) both ship an <b>in-cart AI assistant</b> that lets a buyer select 2+ items, ask <i>"compare these for me,"</i> and get a written verdict plus a spec table — <b>without leaving the cart</b>. Launched Oct 2025 and iterated multiple times since. Measurable lifts in checkout initiation and lower cart dwell across every release.', cn: '淘宝(千问)和京东(京言)都上线了<b>购物车内 AI 助手</b>:买家勾选 2+ 商品,一句"帮我对比",立刻得到文字结论 + 规格对比表 —— <b>无需离开购物车</b>。2025 年 10 月上线,至今已迭代多个版本,每次都能看到结算发起率的提升和购物车停留时长的下降。' },
-  's2.left.c1': { en: '2 similar cases from different sellers — same price band, no way to know why one is Rp2k more expensive.', cn: '两件相似手机壳来自不同卖家 —— 同价格带,却完全看不出为什么一件贵 Rp2k。' },
-  's2.left.c2': { en: '3 vouchers held — no visibility into which applies to which item, or the optimal combination.', cn: '手里有 3 张券 —— 完全不知道哪张适用哪件商品,也不知道最优组合。' },
-  's2.left.c3': { en: 'Free-shipping banner exists, but no guidance on which item to remove to still qualify.', cn: '免运费横条虽在,但没有告诉买家删哪件还能保持凑单。' },
+  's2.p2': { en: 'Taobao (千问) and JD (京言) ship an <b>in-cart AI assistant</b>. Pick 2+ items, ask <i>"compare,"</i> get a verdict + spec table — <b>without leaving the cart</b>. Launched Oct 2025, iterated multiple times since. Every release lifts checkout initiation, cuts cart dwell.', cn: '淘宝(千问)和京东(京言)都上线了<b>购物车内 AI 助手</b>:买家勾选 2+ 商品,一句"帮我对比",立刻得到文字结论 + 规格对比表 —— <b>无需离开购物车</b>。2025 年 10 月上线,至今已迭代多个版本,每次都能看到结算发起率的提升和购物车停留时长的下降。' },
+  's2.left.c1': { en: '2 similar cases, different sellers. Why is one Rp2k more?', cn: '两件相似手机壳来自不同卖家 —— 同价格带,却完全看不出为什么一件贵 Rp2k。' },
+  's2.left.c2': { en: '3 vouchers held — no visibility on the optimal combination.', cn: '手里有 3 张券 —— 完全不知道哪张适用哪件商品,也不知道最优组合。' },
+  's2.left.c3': { en: 'Free-ship banner shows the shortfall — but no way to close it.', cn: '免运费横条虽在,但没有告诉买家删哪件还能保持凑单。' },
   's2.right.c1': { en: '<b>Trigger lives in the cart.</b> Where the choice is actually being made. Not the PDP.', cn: '<b>入口在购物车里。</b>这才是决策真正发生的地方,不是商品详情页。' },
-  's2.right.c2': { en: '<b>Answer first, table second.</b> A one-line verdict up top ("A is cheaper by 5%, B has better reviews"), spec table below for buyers who want detail.', cn: '<b>结论先行,表格随后。</b>顶部一句话结论(如"A 便宜 5%,B 评价更好"),下方是完整规格表给想深看的买家。' },
-  's2.right.c3': { en: '<b>Handoff to purchase.</b> "Keep this one · remove the other" is one tap — the winner stays in cart, the loser is removed, buyer proceeds to checkout.', cn: '<b>一键完成购买。</b>"留这件·删另一件"只需一次点击 —— 赢家留在购物车,输家被移除,买家直接进入结算。' },
+  's2.right.c2': { en: '<b>Answer first, table second.</b> One-line verdict up top. Spec table below for the curious.', cn: '<b>结论先行,表格随后。</b>顶部一句话结论(如"A 便宜 5%,B 评价更好"),下方是完整规格表给想深看的买家。' },
+  's2.right.c3': { en: '<b>Handoff to purchase.</b> One tap: winner stays, loser leaves, checkout begins.', cn: '<b>一键完成购买。</b>"留这件·删另一件"只需一次点击 —— 赢家留在购物车,输家被移除,买家直接进入结算。' },
   's2.cap1.b': { en: 'Shopee cart today', cn: 'Shopee 购物车现状' },
   's2.cap1.t': { en: ' · loaded, 2 similar items, no compare', cn: ' · 已装 2 件相似商品,无对比功能' },
   's2.cap2.b': { en: 'Shopee checkout entry', cn: 'Shopee 结算入口' },
@@ -1058,29 +1058,29 @@ const i18n = {
   's4.eyebrow': { en: 'Localised for SEA · Impact & rollout', cn: '东南亚本地化 · 预期影响与上线节奏' },
   's4.title': { en: 'A ported pattern only works when it speaks the local buyer\'s language.', cn: '移植过来的模式,只有说本地买家的语言才有效。' },
   's4.local.head': { en: '5 changes vs. the Taobao original', cn: '与淘宝原版的 5 处本地化差异' },
-  's4.local.1.h': { en: 'Value-per-unit leads, not spec sheets.', cn: '单位价值优先,不是规格堆砌。' },
+  's4.local.1.h': { en: 'Value-per-unit leads.', cn: '单位价值优先,不是规格堆砌。' },
   's4.local.1.p': { en: 'SEA buyers optimise for price-per-100ml, not feature counts. The AI\'s first line is always a value verdict; specs are secondary.', cn: '东南亚买家优先关注每 100ml 价格,而不是功能数量。AI 第一句永远给价值结论,规格是次要信息。' },
-  's4.local.2.h': { en: 'Vouchers are part of the price.', cn: '优惠券就是价格的一部分。' },
+  's4.local.2.h': { en: 'Voucher-inclusive prices.', cn: '优惠券就是价格的一部分。' },
   's4.local.2.p': { en: 'Every price shown is the after-voucher price, with the applicable voucher named inline. Shopee\'s stacking logic gets translated, not hidden.', cn: '所有价格都是优惠后到手价,并标注适用的具体券。Shopee 复杂的叠加逻辑要解释清楚,不能藏起来。' },
-  's4.local.3.h': { en: 'Multilingual, review-grounded.', cn: '多语言,基于真实评价。' },
+  's4.local.3.h': { en: 'Multilingual, grounded.', cn: '多语言,基于真实评价。' },
   's4.local.3.p': { en: 'AI answers in EN / ID / TH / VN / MS. Chinese-language seller descriptions are auto-translated. Every claim cites the review or Q&A it came from.', cn: 'AI 支持英/印/泰/越/马 5 种语言回答。中文卖家描述自动翻译。每一条结论都能溯源到具体评价或 Q&A。' },
-  's4.local.4.h': { en: 'Verdict streams first, table lazy-loads.', cn: '结论流式返回,表格延迟加载。' },
+  's4.local.4.h': { en: 'Verdict streams first.', cn: '结论流式返回,表格延迟加载。' },
   's4.local.4.p': { en: 'The one-line answer arrives in <600ms; the full spec table loads afterwards. Optimised for 3G / low-end Android common in ID / PH / VN.', cn: '600ms 内返回一句话结论,完整规格表随后加载。针对印/菲/越常见的 3G/低端安卓做过优化。' },
-  's4.local.5.h': { en: 'Every AI answer is reversible.', cn: '每一个 AI 建议都可撤销。' },
-  's4.local.5.p': { en: '"Keep the other" undoes any AI-suggested removal in one tap for 24 hours. Trust is earned in retention, not in the first click.', cn: '"改保留另一件"可在 24 小时内一键撤销任何 AI 建议的删除。信任是靠留存赚来的,不是第一次点击。' },
+  's4.local.5.h': { en: 'Every action is reversible.', cn: '每一个 AI 建议都可撤销。' },
+  's4.local.5.p': { en: 'One-tap undo, 24-hour window. Trust before speed.', cn: '"改保留另一件"可在 24 小时内一键撤销任何 AI 建议的删除。信任是靠留存赚来的,不是第一次点击。' },
   's4.impact.head': { en: 'Expected impact', cn: '预期影响' },
   's4.kpi.1.l': { en: 'Cart → Checkout', cn: '购物车 → 结算' },
-  's4.kpi.1.s': { en: 'Decision paralysis in cart is the top drop-off; a verdict resolves it.', cn: '购物车决策瘫痪是最大流失点,一句结论就能解决。' },
+  's4.kpi.1.s': { en: 'Decision paralysis resolved.', cn: '购物车决策瘫痪是最大流失点,一句结论就能解决。' },
   's4.kpi.2.l': { en: 'Cart abandonment', cn: '购物车放弃率' },
-  's4.kpi.2.s': { en: 'Fewer buyers open cart, bounce, and never return.', cn: '减少"打开购物车 → 跳出 → 不再回来"的用户。' },
+  's4.kpi.2.s': { en: 'Fewer bounces from the cart.', cn: '减少"打开购物车 → 跳出 → 不再回来"的用户。' },
   's4.kpi.3.l': { en: 'Time in cart', cn: '购物车停留时长' },
-  's4.kpi.3.s': { en: 'From tab-to-PDP flipping to one-screen resolution.', cn: '从反复切商详页,变成一屏内解决。' },
+  's4.kpi.3.s': { en: 'One-screen resolution.', cn: '从反复切商详页,变成一屏内解决。' },
   's4.kpi.4.l': { en: 'Order CVR', cn: '订单转化率' },
   's4.kpi.4.s': { en: 'Directional; mid-range estimate benchmarked to Taobao\'s 2024 beta cohort.', cn: '定向估算,基于淘宝 2025-26 上线后的中位数据推算。' },
   's4.rollout.h': { en: '4-week rollout', cn: '4 周分阶段上线' },
   's4.rollout.1': { en: '<b>A/B test in Beauty & 3C</b> — categories where within-cart comparison volume is highest.', cn: '<b>美妆 & 3C 类目 A/B 测试</b> —— 购物车内对比行为最密集的品类。' },
-  's4.rollout.2': { en: '<b>Expand ID / MY / SG</b> — the three markets where LLM inference cost is lowest per query.', cn: '<b>扩至印尼 / 马来 / 新加坡</b> —— LLM 推理成本每次调用最低的 3 个市场。' },
-  's4.rollout.3': { en: '<b>Full-region rollout</b> conditional on refund-rate holding within ±0.5% of baseline.', cn: '<b>全区域上线</b>,前提是退款率相对基线波动在 ±0.5% 以内。' },
+  's4.rollout.2': { en: '<b>Expand to ID / MY / SG.</b>', cn: '<b>扩至印尼 / 马来 / 新加坡</b> —— LLM 推理成本每次调用最低的 3 个市场。' },
+  's4.rollout.3': { en: '<b>Full rollout</b> if refund-rate stable.', cn: '<b>全区域上线</b>,前提是退款率相对基线波动在 ±0.5% 以内。' },
   's4.safeguard': { en: '<b>Safeguards.</b> Every AI answer cites the reviews it drew from. The Copilot never removes an item — only suggests. Refund rate is monitored weekly as a guardrail; if it moves >1%, rollout pauses. Confidence < 0.7 → route to seller chat instead of guessing.', cn: '<b>安全护栏。</b>每个 AI 答案都要标明所引用的评价来源。Copilot 只建议,不主动删除商品。退款率作为守护指标每周监控,波动 >1% 立即暂停上线。置信度 <0.7 时直接转卖家沟通,不靠猜。' },
   'thanks': { en: '— Thank you —', cn: '— 感谢阅读 —' },
 };
